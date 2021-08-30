@@ -1,0 +1,4 @@
+---
+- hosts: webserver
+  tasks:
+    - include: WoWHoneypot/tasks/main.yml

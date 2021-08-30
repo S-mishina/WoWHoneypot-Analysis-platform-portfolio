@@ -1,0 +1,12 @@
+[Unit]
+Description=WoWHoneypot daemon
+Documentation=https://github.com/morihisa/WOWHoneypot
+
+[Service]
+ExecStart = /home/ubuntu/wowhoneypot.sh
+ExecRestart = /bin/kill -WINCH ${MAINPID} ; /home/ubuntu/wowhoneypot.sh
+ExecStop = /bin/kill -WINCH ${MAINPID}
+User = root
+
+[Install]
+WantedBy = multi-user.target
